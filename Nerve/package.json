@@ -1,79 +1,68 @@
 {
-  "name": "hapi-api-template",
+  "name": "learning-nodejs-express-api",
   "version": "1.0.0",
-  "description": "Node JS API with Hapi template",
-  "main": "server.js",
+  "description": "Node JS API with Express template",
+  "main": "app.js",
   "dependencies": {
-    "@hapi/boom": "9.x.x",
-    "@hapi/bounce": "^2.0.0",
-    "@hapi/glue": "7.x.x",
-    "@hapi/hapi": "19.x.x",
-    "@hapi/hoek": "9.x.x",
-    "@hapi/inert": "6.x.x",
-    "@hapi/joi": "17.x.x",
-    "@hapi/vision": "6.x.x",
-    "@makeomatic/confidence": "6.x.x",
-    "babel-eslint": "10.x.x",
     "bcrypt": "^4.0.1",
-    "dotenv": "8.x.x",
-    "glob": "^7.1.6",
-    "hapi-auth-jwt2": "8.x.x",
-    "hapi-swagger": "13.x.x",
-    "haute-couture": "3.x.x",
-    "jsonwebtoken": "8.x.x",
-    "knex": "0.21.x",
-    "mysql": "^2.18.1",
-    "objection": "^2.1.3",
-    "schmervice": "^1.5.0",
-    "schwifty": "5.x.x",
-    "sqlite3": "4.x.x",
-    "toys": "2.x.x",
-    "winston": "^2.4.4"
+    "body-parser": "^1.19.0",
+    "bootstrap": "^3.4.1",
+    "chalk": "^3.0.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "jquery": "^3.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "method-override": "^3.0.0",
+    "mocha": "^7.1.0",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
+    "sinon": "^9.0.0",
+    "supertest": "^4.0.2",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4",
+    "prettier": "^1.19.1",
+    "should": "^13.2.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3",
-    "@hapi/code": "8.x.x",
-    "@hapi/eslint-config-hapi": "13.x.x",
-    "@hapi/eslint-plugin-hapi": "4.x.x",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-mocha": "^6.3.0",
-    "@hapi/lab": "22.x.x",
-    "eslint": "6.x.x",
-    "hpal": "2.x.x",
-    "hpal-debug": "1.x.x",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-find-rules": "^3.5.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-find-rules": "^3.4.0",
     "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-mocha": "^6.3.0",
+    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "husky": "^4.2.5",
-    "prettier": "^1.19.1"
+    "expect": "^25.1.0",
+    "husky": "^4.2.3"
   },
   "scripts": {
-    "test": "mocha server/api/**/**/*Test.js",
     "start": "nodemon app.js",
-    "eslint": "eslint .",
-    "dev": "nodemon --exec 'npm run eslint & npm start'",
+    "lint": "eslint .",
+    "test": "mocha server/api/**/**/*Test.js",
     "efr": "eslint-find-rules --unused .eslintrc.js --no-error",
     "debug": "DEBUG=app node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nexlesoft/Hapi-api-template.git"
+    "url": "git+https://github.com/trunghm/learning-nodejs-express-api.git"
   },
   "keywords": [
     "nodejs",
     "restful",
     "API",
-    "hapi",
-    "hapipal"
+    "expressJS"
   ],
   "author": "Trung Huynh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nexlesoft/Hapi-api-template.git/issues"
+    "url": "https://github.com/trunghm/learning-nodejs-express-api/issues"
   },
-  "homepage": "https://github.com/nexlesoft/Hapi-api-template.git#readme",
+  "homepage": "https://github.com/trunghm/learning-nodejs-express-api#readme",
   "nodemonConfig": {
     "restartable": "rs",
     "ignore": [
@@ -83,16 +72,12 @@
     "delay": "2500",
     "env": {
       "NODE_ENV": "development",
-      "DB_HOST": "streaming.nexlesoft.com",
-      "DB_USER": "tester",
-      "DB_PASSWORD": "Mar@2012",
-      "DB_NAME": "test",
       "PORT": 4000
     },
     "ext": "js,json"
   },
   "engines": {
-    "node": ">=12.16.2"
+    "node": ">=10.15.0"
   },
   "husky": {
     "hooks": {

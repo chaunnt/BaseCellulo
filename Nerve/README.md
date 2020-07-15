@@ -1,37 +1,15 @@
-# Teamplate nodejs: hapijs-api-template
-## Description
-##. hapijs
-##. mysql
-##. swagger
-##. eslint
-## Installation
-####1. Clone this project or Download that ZIP file
+# learning-nodejs-express-api
 
-```sh
-$ git clone https://github.com/nexlesoft/Hapi-api-template.git
-```
+##References
+###To install mongoDb on Mac, refer to http://wiki.nexlesoft.com/wiki/index.php/Guide_-_Install_Mongodb_on_MacOSX
 
-####2.  Make sure you have [npm](https://www.npmjs.org/) installed globally
+###To debug nodeJS, refer to https://nodejs.org/en/docs/guides/debugging-getting-started/
 
-More details here
-https://nodejs.org/en/download/ 
+###Error when launching the app
+* dyld: lazy symbol binding failed: Symbol not found: _napi_add_finalizer
+Run this command
+<pre>
+npm rebuild bcrypt --build-from-source
+</pre>
 
-####// note:
- - Create .env base on .env-template
-
-####3. On the command prompt run the following commands
-
-```sh
-$ cd `project-directory`
-```
-```sh
-$ npm install 
-```
-```sh
-$ npm start
-```
-
-## Try http://localhost:5001/documentation
-## Reference
-* https://medium.com/the-resonant-web/production-ready-hapi-js-starter-kit-part-2-cba358373017
-* https://medium.com/the-resonant-web/production-ready-hapi-js-starter-kit-part-2-cba358373017
+###Sample Swagger doc: https://itnext.io/setting-up-swagger-in-a-node-js-application-d3c4d7aa56d4

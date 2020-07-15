@@ -45,6 +45,6 @@ module.exports = {
         allowModules: ['should', 'sinon', 'mocha', 'supertest']
       }
     ],
-    'import/no-dynamic-require': 'off'
+    'import/no-dynamic-require': 'off',
   }
 };
