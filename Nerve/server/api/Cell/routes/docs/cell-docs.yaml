@@ -1,0 +1,135 @@
+definitions:
+  Dataset:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+        example: 918
+      topic:
+        type: string
+        example: 'ORDER_1234'
+      title:
+        type: string
+        example: 'notification title'
+      content:
+        type: string
+        example: 'Order #1234 has been completed.'
+      userId:
+        type: integer
+        example: 1134
+      isRead:
+        type: boolean
+        example: false
+      createdTime:
+        type: string
+        format: date-time
+        example: '2017-07-21T17:32:28Z'
+      type:
+        type: string
+        example: ''
+      data:
+        type: object
+        example: {}
+
+paths:
+  /cell/try:
+    post:
+      summary: try cell ability
+      tags: [Cell]
+      responses:
+        200:
+          description: execution result
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: success
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    example: link to result
+        500:
+          description: failed to execute
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: Sorry, I'm failed
+              code:
+                type: number
+                example: 500
+
+  /cell/train:
+    post:
+      summary: train cell ability
+      tags: [Cell]
+      responses:
+        200:
+          description: execution result
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: success
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    example: link to result
+        500:
+          description: failed to execute
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: Sorry, I'm failed
+              code:
+                type: number
+                example: 500
+  /cell/examine:
+    post:
+      summary: try cell ability
+      tags: [Cell]
+      responses:
+        200:
+          description: execution result
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: success
+              code:
+                type: integer
+                example: 200
+              data:
+                type: object
+                properties:
+                  result:
+                    type: string
+                    example: link to result
+        500:
+          description: failed to execute
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: Sorry, I'm failed
+              code:
+                type: number
+                example: 500

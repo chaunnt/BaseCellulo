@@ -2,12 +2,8 @@
 const router = require('express').Router();
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
-const Book = require('./book/models/bookModel');
-const Category = require('./category/models/categoryModel');
-const User = require('./user/models/userModel');
-const bookRouter = require('./book/routes/bookRouter')(Book, User);
-const userRouter = require('./user/routes/userRouter')(User);
-const authRouter = require('../auth/routes/authRouter')(User);
+
+const cellRouter = require('./Cell/routes/CellRouter')(Cell);
 
 // Swagger set up
 const modelPaths = ['./server/api/**/**/models/*.js'];
@@ -51,8 +47,6 @@ router.use(
 );
 
 // api router will mount other routers for all our resources
-router.use('/books', bookRouter);
-router.use('/users', userRouter);
-router.use('/auth', authRouter);
+router.use('/cell', cellRouter);
 
 module.exports = router;

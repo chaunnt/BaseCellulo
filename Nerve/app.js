@@ -28,6 +28,9 @@ const db = mongoose
     throw err;
   });
 
+// setup the api
+app.use('/api', [upload.any(), preStart()], api);
+
 // setup the app middleware
 appMiddleware(app);
 
@@ -37,12 +40,17 @@ app.use('/api', api);
 // setup static serving
 viewMiddleware(app);
 
+// // example of serving  html page using view engine
+// app.get('/', (req, res) => {
+//   res.render('index', {
+//     title: 'Node JS Template',
+//     list: ['Trung', 'Huynh']
+//   });
+// });
+
 // example of serving  html page using view engine
 app.get('/', (req, res) => {
-  res.render('index', {
-    title: 'Node JS Template',
-    list: ['Trung', 'Huynh']
-  });
+  res.redirect('/api/docs/#/');
 });
 
 // set up global error handling here
