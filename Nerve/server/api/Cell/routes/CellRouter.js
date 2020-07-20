@@ -6,5 +6,6 @@ const handlerResponse = require('../../../utils/common-helpers')
 router.post('/try', handlerResponse(handlers.tryCell));
 router.post('/train', handlerResponse(handlers.trainCell));
 router.post('/examine', handlerResponse(handlers.examineCell));
+router.post('/use', handlerResponse(handlers.useCell));
 
 module.exports = router;

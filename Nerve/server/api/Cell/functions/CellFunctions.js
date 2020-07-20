@@ -30,8 +30,12 @@ async function examineCell(req, res) {
   executeJob("../functions/examine.js");
 }
 
+async function useCell(req, res) {
+  executeJob("../functions/use.js");
+}
 module.exports = {
   examineCell,
   trainCell,
-  tryCell
+  tryCell,
+  useCell
 };
