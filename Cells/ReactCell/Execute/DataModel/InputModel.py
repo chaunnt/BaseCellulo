@@ -1,0 +1,3 @@
+class InputData:
+    imagePath = ''
+    modelPath = ''

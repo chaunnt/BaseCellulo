@@ -1,0 +1,76 @@
+{
+  "exams": [
+    {
+      "image": "261.jpg",
+      "data": {
+        "card_slogan": 1,
+        "card_logo": 1,
+        "corner1": 1,
+        "corner2": 1,
+        "corner3": 1,
+        "corner4": 1,
+        "card": 1
+      }
+    },
+    {
+      "image": "427.jpg",
+      "data": {
+        "card_slogan": 1,
+        "card_logo": 1,
+        "corner1": 1,
+        "corner2": 1,
+        "corner3": 1,
+        "corner4": 1,
+        "card": 1
+      }
+    },
+    {
+      "image": "428.jpg",
+      "data": {
+        "card_slogan": 1,
+        "card_logo": 1,
+        "corner1": 1,
+        "corner2": 1,
+        "corner3": 1,
+        "corner4": 1,
+        "card": 1
+      }
+    },
+    {
+      "image": "432.jpg",
+      "data": {
+        "card_slogan": 1,
+        "card_logo": 1,
+        "corner1": 1,
+        "corner2": 1,
+        "corner3": 0,
+        "corner4": 1,
+        "card": 1
+      }
+    },
+    {
+      "image": "433.jpg",
+      "data": {
+        "card_slogan": 1,
+        "card_logo": 1,
+        "corner1": 1,
+        "corner2": 1,
+        "corner3": 1,
+        "corner4": 1,
+        "card": 1
+      }
+    },
+    {
+      "image": "434.jpg",
+      "data": {
+        "card_slogan": 1,
+        "card_logo": 1,
+        "corner1": 1,
+        "corner2": 1,
+        "corner3": 1,
+        "corner4": 0,
+        "card": 1
+      }
+    }
+  ]
+}
