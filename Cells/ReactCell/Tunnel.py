@@ -13,7 +13,7 @@ import numpy as np
 app = Flask(__name__)
 executor = Executor()
 
-@app.route('/health',methods=['GET'])
+@app.route('/HealthCheck',methods=['GET'])
 def healthCheck():
     return json.dumps({'response':'Success'})
 
@@ -22,11 +22,14 @@ def execute():
     try:
         data = request.json
         imagePath = data.get('imagePath')
-        executor.execute(imagePath)
-
-        return successRes(executor.output)
+        if not imagePath:
+            return errorRes("body is invalid,", "data input is incorrect")
+        finalResult = executor.execute(imagePath)
+        if finalResult == False:
+            return errorRes("Card is not found","Failed to execute")
+        return successRes()
     except Exception as e:
         return errorRes(str(e),"Failed to execute")
 
 if __name__ == "__main__":
-    app.run(os.environ.get('HOST','localhost'),int(os.environ.get('PORT','3001')))
+    app.run(os.environ.get('HOST','localhost'),int(os.environ.get('PORT','3003')), threaded = True)
